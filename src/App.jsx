@@ -6,6 +6,8 @@ import Feed from "./components/Feed";
 import SearchResult from "./components/SearchResult";
 import VideoDetails from "./components/VideoDetails";
 import { AppContext } from "./context/contextApi";
+import ChannelDetails from "./components/Channel/ChannelDetails";
+
 
 const App = () => {
     return (
@@ -20,6 +22,8 @@ const App = () => {
                             element={<SearchResult />}
                         />
                         <Route path="/video/:id" element={<VideoDetails />} />
+                        <Route path="/channeldetails/:id" exact element={<ChannelDetails />} />
+                       
                     </Routes>
                 </div>
             </BrowserRouter>
