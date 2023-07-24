@@ -5,22 +5,22 @@ import { MdOutlineVideoLibrary } from "react-icons/md";
 
 const MobileNav = () => {
   return (
-    <div className="fixed bottom-0 left-0 right-0 flex justify-around items-center h-14 border-t border-slate-700 bg-black shadow-lg z-40">
-      <div className="flex flex-col items-center justify-center text-white cursor-pointer">
+    <div className="fixed bottom-0 left-0 right-0 flex justify-around items-center h-14 border-t border-slate-700 bg-white dark:bg-black shadow-lg z-40">
+      <div className="flex flex-col items-center justify-center text-black dark:text-white cursor-pointer">
         <AiFillHome className="h-5 w-5" />
       <div className="text-sm">Home</div>
       </div>
-      <div className="flex flex-col items-center justify-center text-white cursor-pointer">
+      <div className="flex flex-col items-center justify-center text-black dark:text-white cursor-pointer">
   
       <MdOutlineSubscriptions className="h-5 w-5"  />
       <div className="text-sm">Subscription</div>
       </div>
-      <div className="flex flex-col items-center justify-center text-white cursor-pointer">
+      <div className="flex flex-col items-center justify-center text-black dark:text-white cursor-pointer">
   
       <MdOutlineVideoLibrary className="h-5 w-5"  />
       <div className="text-sm">Library</div>
       </div>
-      <div className="flex flex-col items-center justify-center text-white cursor-pointer">
+      <div className="flex flex-col items-center justify-center text-black dark:text-white cursor-pointer">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"

@@ -6,10 +6,12 @@ import { AiOutlineLike } from "react-icons/ai";
 import { abbreviateNumber } from "js-abbreviation-number";
 import ReactMarkdown from "react-markdown";
 import MobileNav from "./MobileNav";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 import { fetchDataFromApi } from "../utils/api";
 import { Context } from "../context/contextApi";
 import SuggestionVideoCard from "./SuggestionVideoCard";
+
 
 
 const VideoDetails = () => {
@@ -18,6 +20,8 @@ const VideoDetails = () => {
   const [showMore, setShowMore] = useState(false); // New state for show more
   const { id } = useParams();
   const { setLoading } = useContext(Context);
+  // const pageRoute = useNavigate()
+
 
   useEffect(() => {
     document.getElementById("root").classList.add("custom-h");
@@ -74,24 +78,26 @@ const VideoDetails = () => {
           <div className="flex justify-between flex-col md:flex-row mt-4">
             <div className="flex">
               <div className="flex items-start">
-              {/* <Link to={`/channeldetails/${channel?.channelId}`}> */}
+              <Link to={`/channel/${video?.snippet?.channelId}`}>
                 <div className="flex h-11 w-11 rounded-full overflow-hidden cursor-pointer">
+                {/* onClick={() => pageRoute(`/channel/${channels?.snippet?.channelId}`)} */}
                   <img
                     className="h-full w-full object-cover"
                     src={video?.author?.avatar[0]?.url}
                   />
                 </div>
-                {/* </Link> */}
+                </Link>
               </div>
               <div className="flex flex-col ml-3">
-              {/* <Link to={`/channeldetails/${channel?.channelId}`}> */}
+             
                 <div className="text-black dark:text-white text-md font-semibold flex items-center cursor-pointer">
+               
                   {video?.author?.title}
                   {video?.author?.badges[0]?.type === "VERIFIED_CHANNEL" && (
                     <BsFillCheckCircleFill className="text-white/[0.5] text-[12px] ml-1" />
                   )}
                 </div>
-                {/* </Link> */}
+              
                 <div className="text-black/[0.7] dark:text-white/[0.7] text-sm">
                   {video?.author?.stats?.subscribersText}
                 </div>

@@ -22,7 +22,9 @@ const App = () => {
                             element={<SearchResult />}
                         />
                         <Route path="/video/:id" element={<VideoDetails />} />
-                        <Route path="/channeldetails/:id" exact element={<ChannelDetails />} />
+                        <Route path="/channel/:channelId" element={<ChannelDetails />} />
+                        
+                        {/* <Route path="/channeldetails/:id" exact element={<ChannelDetails />} /> */}
                        
                     </Routes>
                 </div>
